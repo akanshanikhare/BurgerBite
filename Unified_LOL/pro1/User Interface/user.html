@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+
+        <title>User Interface</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet"> 
+        <link href="templatemo_590_topic_listing/css/dropdown.css"  >
+    
+        <style>
+                /* Internal CSS */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color:#E49B0F;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3498db;
+      color: white;
+    }
+        </style>
+        
+        <style>
+            /* Add some basic styling for the dropdown */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+    
+            /* Style the dropdown button */
+            .dropbtn {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+    
+            /* Style the dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+    
+            /* Style the links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+    
+            /* Change color on hover */
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+    
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+        
+        /* Add some basic styling for the box */
+        .border-box {
+            border: 2px solid white; /* Black border */
+            padding: 20px; /* Padding inside the box */
+            width: 200px; /* Adjusted width */
+            margin: 50px; /* Margin around the box */
+        }
+
+        .star-rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+
+        .star-rating span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+
+        .star-rating span:before {
+            content: '\2605'; /* Unicode character for a star */
+            position: absolute;
+            color: #E49B0F; /* Gold color for filled stars */
+        }
+
+        .star-rating span:not(:hover):before {
+            opacity: 0.6; /* Default opacity for unfilled stars */
+        }
+
+        .star-rating span:hover:before,
+        .star-rating span:hover ~ span:before {
+            opacity: 1; /* Full opacity for filled stars on hover */
+        }
+
+        .box {
+            width: 200px; /* Adjusted width for each box */
+            height: 150px; /* Adjusted height for each box */
+           
+            margin: 10px; /* Margin between the boxes */
+            float: left; /* Float the boxes to the left for horizontal alignment */
+        }
+
+        .right-box {
+            float: right; /* Float the box to the right */
+        }
+
+        .left-shifted-box {
+            margin-left: 50px; /* Adjusted margin-left to shift the box to the left */
+        }
+        </style>
+
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+<link rel = "icon" href =  "images\topics\icons8-courthouse-48.png" type = "image/x-icon"> 
+
+
+    </head>
+    
+    <body style="background-color: #f9f9f9;" id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a style="color:  #E49B0F;" class="navbar-brand" href="index.html">
+                        <i class="bi-back"></i>
+                        <span >Legion of Law</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Explore</button>
+                        <div class="dropdown-content">
+                          <a href="PROFILE/startbootstrap-resume-gh-pages/profile.html">Profile</a>
+                          <a href="#">Messages</a>
+                          <a href="../Main/main.html">Log out</a>
+                        </div>
+                      </div>
+
+
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section style=" background-image: url('images/bg3.jpg'); background-size: cover;
+            " class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h1 class="text-white text-center">Book. Consult. Prevail.</h1>
+
+                            <h6 class="text-center">Seamlessly Reserve Your Legal Ally</h6>
+
+                            <div method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bi-search" id="basic-addon1">
+                                        
+                                    </span>
+
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="What are you looking for?" aria-label="Select ">
+
+                                    <div class="dropdown">
+                                        
+                                        <button type="submit" class="form-control" style="width: 900px;height: 60px;">Select </button>
+                                   
+                                        <div class="dropdown-content">
+                                            <a href="#topfamily">Family Lawyer</a>
+                                            <a href="#topinjury">Injury Lawyer</a>
+                                            <a href="#topcyber">Cyber Lawyer</a>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            
+                <div id="topfamily" class="container" style="margin-top: 30px; margin-left: 100px;">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="topics-detail.html">
+                                    <div class="d-flex">
+                                        <div >
+                                            <h5 class="mb-2">Family Lawyer</h5>
+
+                                            <p class="mb-0">Divorce and Separation<br> Child Custody and Visitation <br>Child and Spousal Support <br> Property Division<br> Adoption<br> Paternity Issues<br> Domestic Violence and Restraining Orders<br> Prenuptial and Postnuptial Agreements and many more
+                                            </p>
+                                            
+                                        </div>
+
+                                        
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/Family.webp" class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 style="color: #E49B0F;">Topmost Lawyers</h5>
+
+                                            <div class="box">
+                                            <div class="border-box" style="margin-left: 10px;">
+                                                <p class="text-black" style="font-size: 15px;">
+                                                    Adv. Roshani K. Gadiwan <br>
+                                                <b>Contact:</b> 9876119245 <br> 
+                                                <b>Location:</b> 157 Triveni Ramdas Peth, Nagpur<br>
+                                                    <div class="star-rating">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="box right-box">
+                                            <div class="border-box">
+                                                <p class="text-black" style="font-size: 15px;">Adv. Shilpa Giratkar<br>
+                                                <b>Contact:</b> 8765982234 <br> 
+                                                <b>Location:</b> 
+                                                
+                                                Subhash Road Ganesh Peth, Nagpur<br>
+                                                    <div class="star-rating">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            
+
+            <!--injury lawyer-->
+            
+                <div id="topinjury" class="container" style="margin: 20px; margin-left: 100px;">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="topics-detail.html">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Injury Lawyer</h5>
+
+                                            <p class="mb-0">Car Accidents<br> Medical Malpractice <br>Slip and Fall Accidents <br> Workplace Injuries<br> Product Liability<br> Premises Liability<br> Dog Bites<br> Wrongful Death and many more
+                                            </p>
+                                        </div>
+
+                                        
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/injury.jpeg" class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 style="color: #E49B0F;">Topmost Lawyers</h5>
+
+                                            <div class="box">
+                                            <div class="border-box" style="margin-left: 10px;">
+                                                <p class="text-black" style="font-size: 15px;">Adv. Y.b.sharma<br>
+                                                <b>Contact:</b> 7516645381 <br> 
+                                                <b>Location:</b> 
+                                                Central Avenue Road Bajeria, Nagpur<br>
+                                                    <div class="star-rating">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="box right-box">
+                                            <div class="border-box" >
+                                                <p class="text-black" style="font-size: 15px;">
+                                                    Adv. Gaurav Khond<br>
+                                                <b>Contact:</b> 9765436612 <br> 
+                                                <b>Location:</b> Beltarodi Road Narendra Nagar, Nagpur<br>
+                                                    <div class="star-rating" >
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            <!--end-->
+
+<!--Cyber lawyer-->
+            <div id="topcyber" class="container" style="margin: 20px; margin-left: 100px;">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="topics-detail.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">Cyber Lawyer</h5>
+
+                                        <p class="mb-0">Cybercrime Defense<br> Data Breach and Privacy Issues <br>Intellectual Property Theft <br> Online Defamation<br> E-commerce Disputes<br> Cyberbullying and Online Harassment<br> Cybersecurity Compliance<br> Technology Contracts and Licensing and many more
+                                        </p>
+                                    </div>
+
+                                    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-block custom-block-overlay">
+                            <div class="d-flex flex-column h-100">
+                                <img src="images/cyber.png" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block-overlay-text d-flex">
+                                    <div>
+                                        <h5 style="color: #E49B0F;">Topmost Lawyers</h5>
+
+                                        <div class="box">
+                                        <div class="border-box" style="margin-left: 10px;">
+                                            <p class="text-black" style="font-size: 15px;">
+                                                Veracity IT and Legal Services LLP<br>
+                                            <b>Contact:</b> 9432551256 <br> 
+                                            <b>Location:</b> 
+                                            Sadar Bazar, Nagpur<br>
+                                                <div class="star-rating">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    
+                                                </div>
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="box right-box">
+                                        <div class="border-box" >
+                                            <p class="text-black" style="font-size: 15px;">
+                                                Chande And Associate Advocates<br>
+                                            <b>Contact:</b> 7990992145 <br> 
+                                            <b>Location:</b> Ring Road Mankapur, Nagpur<br>
+                                                <div class="star-rating" >
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                   
+                                                </div>
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="section-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--end-->
+            
+            <div  class="col-12 text-center">
+                            <div class="custom-form mt-4 pt-2 mb-lg-0 mb-5" >
+                                <a href="book_lawyer.html">
+                                        <button  type="submit"  style="width: 500px;height: 60px; margin-left: 390px;"> Book Your Lawyer </button>
+                                    </a>
+                                    </div>
+                            </div>
+                            
+                  
+
+
+            <section  class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div  class="col-12 text-center">
+                            <h2 style="color: black;">Ask Your Quries</h2>
+                        </div>
+                        
+                        <!--queries-->
+                        <div style="margin-left: 200px" class="col-lg-8 mt-5 mt-lg-0">
+
+                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                              <div class="row">
+                                <div class="col-md-6 form-group">
+                                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                              </div>
+                              <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Title" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Query Description" required></textarea>
+                              </div>
+                             
+                              <div class="custom-form mt-4 pt-2 mb-lg-0 mb-5" >
+                               
+                                        <button  type="submit"  style="width: 200px;height: 60px; margin-left: 40px;"> Submit </button>
+                            </div>
+                            </form>
+                
+                          
+                
+                        </div>
+                
+                      
+                    
+                        <!--quries end-->
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        
+            <!--cases-->
+            <div style="margin-top: 70px;" id="slideshow">
+                <div class="slide-wrapper">
+                    
+                    <!-- Define each of the slides
+                and write the content -->
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            Cyber Lawyer
+                        </h1> 
+                        <h2>Corporate Espionage and Stolen Intellectual Property</h2>
+                        <p>Situation: As the CEO of a tech startup, the distress is profound as we uncover a
+                            sophisticated cyberattack that has led to the theft of our company's most valuable
+                            intellectual property. This includes proprietary algorithms and innovative designs that
+                            were the result of years of research and development. The potential implications for our
+                            competitiveness and future growth are alarming. I urgently need a Cyber Lawyer to assess
+                            the full extent of the breach, identify the cybercriminals responsible, and take swift
+                            legal action to protect our intellectual assets.”</p>
+                    </div>
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            Family Lawyer
+                        </h1> 
+                        <h2>Complex International Child Custody Dispute</h2>
+                        <p>Situation: In the midst of a divorce with my spouse from a different country, the
+                            distress is overwhelming as we navigate a complex international child custody dispute.
+                            The legal systems of multiple jurisdictions are complicating matters, leaving me unsure
+                            about the future relationship with my child. I urgently need a Family Lawyer who
+                            understands the nuances of international family law, can guide me through the legal
+                            complexities, and advocate for the best interests of my child across borders.</p>
+                    </div>
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            Injury Lawyer
+                        </h1> 
+                        <h2>Catastrophic Injuries in a Multi-Vehicle Collision
+                        </h2>
+                        <p>Situation: A catastrophic multi-vehicle collision has left me with severe injuries, including paralysis. The distress is profound as the physical pain is coupled with the uncertainty about my future quality of life. The mounting medical expenses and loss of income are overwhelming. I urgently need a Personal Injury Lawyer to not only assess the details of the accident but also collaborate with medical experts to understand the long-term impact of my injuries. The legal strategy should encompass immediate medical expenses, ongoing rehabilitation, and compensation for the loss of future earnings.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--end cases-->
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
